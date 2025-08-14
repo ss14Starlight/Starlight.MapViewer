@@ -1,0 +1,103 @@
+:root {
+    --command: #334E6DC8;
+    --medical: #52B4E996;
+    --service: #9FED5896;
+    --engineering: #EFB34196;
+    --security: #DE3A3A96;
+    --bar: #79150096;
+    --science: #D381C996;
+    --cargo: #A4610696;
+    --neutral: #D4D4D496;
+    --neutral-light: #D4D4D428;
+
+    --black: #1D1D21;
+    --red: #B02E26;
+    --green: #5E7C16;
+    --brown: #835432;
+    --blue: #3C44AA;
+    --purple: #8932B8;
+    --cyan: #169C9C;
+    --light-gray: #9D9D97;
+    --gray: #474F52;
+    --pink: #F38BAA;
+    --lime: #80C71F;
+    --yellow: #FED83D;
+    --light-blue: #3AB3DA;
+    --magenta: #C74EBD;
+    --orange: #F9801D;
+    --white: #F9FFFE;
+}
+
+canvas {
+    image-rendering: -moz-crisp-edges !important;
+    image-rendering: -webkit-crisp-edges !important;
+    image-rendering: crisp-edges !important;
+    /*image-rendering: pixelated !important*/;
+}
+
+.map {
+    height: 100vh;
+    width: 100%;
+    background-color: #060913;
+}
+
+.hidden {
+    display: none;
+}
+
+#map-selector {
+    top: 65px;
+    left: .5rem;
+    min-width: 120px;;
+}
+
+#map-selector > .selected-row {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+#map-selector .selected-label {
+    margin: 0;
+    width: 100%;
+}
+
+#map-selector-maps > button {
+    width: 100%;
+}
+
+#map-selector-maps > button[disabled] {
+    color: #bbb;
+    /* based on ol.css button styling */
+    background-color: rgba(0, 30, 68, 0.75);
+}
+
+#grid-selector {
+    position: absolute;
+    top: 65px;
+    left: 150px;
+    min-width: 120px;
+    transition: top .2s ease
+}
+
+#grid-selector .selected-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+#grid-selector .selected-label {
+    margin: 0;
+    width: 100%
+}
+
+#grid-selector button {
+    border: none;
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 3px
+}
+
+#grid-selector-list {
+    margin-top: 5px
+}
